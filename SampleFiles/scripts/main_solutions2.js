@@ -1,12 +1,12 @@
-const beyonceTweet = {
-    name: 'Beyoncé',
-    handle: '@beyonce',
-    text: '#LEMONADE the Visual Album.'
+const beyonceTwitter = {
+    name: 'BEYONCÉ',
+    handle: '@Beyonce',
+    text: 'ivypark.com'
 }
 
 const links = ['https://twitter.com/mmart168', 'https://twitter.com/beyonce', 'http://www.billboard.com/files/media/beyonce-2016-press-Parkwood-Entertainment-Lemonade-billboard-1548-650-4.jpg']
 
-const modifyText = () => {
+function modifyText(beyonceTweet) {
     /*
     * Changes the text of message2 to be the message of the BeyonceTweet object
     * Changes the text of link2 to be the name from the BeyonceTweet object
@@ -17,15 +17,15 @@ const modifyText = () => {
     document.getElementById('user2').innerHTML = beyonceTweet.handle
 }
 
-const changeLinkAndImageAttributes = () => {
+const changeLinkAndImageAttributes = fucntion(BeyonceTweet); {
     /*
     * Sets the href attribute for link1 to point to the first element in the links array
     * Sets the href attribute for link2 to point to the second element in the links array
     * Sets the src attribute for the beyonce image to point to the third element in the links array
     */
-    document.getElementById('link1').href = links[0]
-    document.getElementById('link2').href = links[1]
-    document.getElementById('beyonce').src = links[2]
+    document.querySelector('#link1').href = links[0]
+    document.querySelector('#link2').href = links[1]
+    document.querySelector('#Beyonce').src = links[2]
 }
 
 const changeClassAttribute = () => {
@@ -33,7 +33,7 @@ const changeClassAttribute = () => {
     Update the ***changeClassAttribute*** function so that it replaces the “tweet”
     class with the “tweet-pink” class for the two tweets.
     */
-    document.getElementById('tweet1').className = 'tweet-pink'
+    document.querySelector('tweet1').className = 'tweet-pink'
     document.getElementById('tweet2').className = 'tweet-pink'
 }
 
@@ -49,6 +49,6 @@ const appendElements = () => {
     document.getElementById('tweet1').appendChild(a)
 
     const img = document.createElement('img')
-    img.src = 'http://www.saporedicina.com/english/wp-content/uploads/2013/11/pandapuppy.jpg'
+    img.src = 'https://twitter.com/Beyonce/header_photo'
     document.getElementById('tweet1').appendChild(img)
 }

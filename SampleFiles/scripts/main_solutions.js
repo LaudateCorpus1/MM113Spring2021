@@ -6,15 +6,18 @@ const StarTrekTweet = {
 
 const links = ['https://twitter.com/StarTrek', 'https://twitter.com/StarTrek', 'https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/26/1530003551-star-trek.jpg']
 
-function modifyText(){
+function modifyText(StarTrekTweet){
   //Change the text of message2 to be the message of the StarTrekTweet object
   //Change the text of user2 to be the handle from the StarTrekTweet object
   //Changes the text of message 2 class to be the handle from the StarTrekTweet object
-  document.querySelector('#user2').innerHTML = StarTrekTweet.name
-  document.getElementById('link2').innerHTML = StarTrekTweet.handle
   document.getElementById('message2').innerHTML = StarTrekTweet.text
+  document.getElementById('link2').innerHTML = StarTrekTweet.name
+  document.getElementById('message 2 class').innerHTML = StarTrekTweet.handle
   //console.log('modifying text')
   // YOUR CODE BELOW THIS LINE.
+  document.getElementsByClassName('css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0').innerHTML = StarTrekTweet.span;
+  document.getElementsByClassName('css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0').innerHTML = StarTrekTweet.span;
+  document.getElementById('message 2 class').innerHTML = StarTrekTweet.handle;
 }
 
 const changeLinkAndImageAttributes = () => {
@@ -30,9 +33,8 @@ const changeClassAttribute = () => {
   //Update the changeClassAttribute
   //function so that it replaces the “tweet” class with the “tweet-pink” class for the two tweets.
   // change id="tweet1" class="tweet" to id="tweet1" class="tweet-pink"
-  // YOUR CODE BELOW THIS LINE
-  document.querySelector('#tweet1').className = 'tweet-pink'
-  //  document.getElementById('tweet1').className = 'tweet-pink'
+  document.querySelector('#tweet').className = 'tweet-pink'
+  document.getElementById('#tweet1').className = 'tweet-pink'
 }
 
 const appendElements = () => {
@@ -49,5 +51,13 @@ const appendElements = () => {
   const img = document.createElement('img')
   img.src = "https://metvcdn.metv.com/LMbyw-1481735992-41-show-940x370-App-StarTrek.jpg"
   document.getElementById('tweet1').appendChild(img);
-
+  //YOUR CODE BELOW
+  
+  const newLink = document.createElement ('a');
+    newLink.href = 'http://www.ohlone.edu';
+    newLink.appendChild(document.createTextNode('Intro to Javascript'));
+    document.getElementById('tweet1').appendChild(newLink);
+    const img = document.createElement('img');
+    img.src = "https://twitter.com/StarTrek/header_photo"
+    document.getElementById('tweet1').appendChild(img);
 }
